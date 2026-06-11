@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="240">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b101b" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#090d15" />
+    </linearGradient>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#06b6d4" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <!-- Frame -->
+  <rect x="2" y="2" width="896" height="236" rx="12" fill="url(#bg)" stroke="#1e293b" stroke-width="2" />
+  <rect x="8" y="8" width="884" height="224" rx="8" fill="none" stroke="#06b6d4" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.25" />
+
+  <!-- Waveform Graphic in Background -->
+  <g opacity="0.15" stroke="url(#flowGrad)" stroke-width="2" stroke-linecap="round">
+    <path d="M 60 120 Q 90 60 120 120 T 180 120 T 240 120 T 300 120" fill="none" />
+    <path d="M 600 120 Q 630 60 660 120 T 720 120 T 780 120 T 840 120" fill="none" />
+  </g>
+
+  <!-- Circular Sprint Dial on Left -->
+  <g transform="translate(90, 80)">
+    <circle cx="35" cy="35" r="32" fill="none" stroke="#1e293b" stroke-width="5" />
+    <circle cx="35" cy="35" r="32" fill="none" stroke="url(#flowGrad)" stroke-width="5" stroke-dasharray="140 200" stroke-linecap="round" />
+    <text x="35" y="40" text-anchor="middle" fill="#38bdf8" class="mono" font-size="12" font-weight="bold">25:00</text>
+  </g>
+
+  <!-- Audio Bars on Right -->
+  <g transform="translate(740, 95)" fill="url(#flowGrad)">
+    <rect x="0" y="15" width="4" height="20" rx="2" />
+    <rect x="8" y="5" width="4" height="30" rx="2" />
+    <rect x="16" y="0" width="4" height="40" rx="2" />
+    <rect x="24" y="8" width="4" height="24" rx="2" />
+    <rect x="32" y="18" width="4" height="14" rx="2" />
+    <rect x="40" y="10" width="4" height="26" rx="2" />
+    <rect x="48" y="2" width="4" height="36" rx="2" />
+    <rect x="56" y="12" width="4" height="22" rx="2" />
+  </g>
+
+  <!-- Corner Brackets -->
+  <path d="M 16 32 L 16 16 L 32 16" fill="none" stroke="#06b6d4" stroke-width="2" />
+  <path d="M 884 32 L 884 16 L 868 16" fill="none" stroke="#06b6d4" stroke-width="2" />
+  <path d="M 16 208 L 16 224 L 32 224" fill="none" stroke="#06b6d4" stroke-width="2" />
+  <path d="M 884 208 L 884 224 L 868 224" fill="none" stroke="#06b6d4" stroke-width="2" />
+
+  <!-- Main Titles -->
+  <text x="450" y="52" text-anchor="middle" fill="#06b6d4" class="mono" font-size="13" letter-spacing="2">&lt;LOCAL_FIRST / AGILE_FLOW&gt;</text>
+  <text x="450" y="100" text-anchor="middle" fill="#f8fafc" class="sans" font-size="38" font-weight="800" letter-spacing="4" filter="url(#softGlow)">SPRINT FLOW</text>
+  <text x="450" y="130" text-anchor="middle" fill="#94a3b8" class="sans" font-size="14" font-weight="500" letter-spacing="1.5">LOCAL-FIRST SPRINT PLANNER &amp; PROCEDURAL AMBIENT SYNTHESIS</text>
+
+  <!-- Divider -->
+  <line x1="220" y1="146" x2="680" y2="146" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Feature Pills -->
+  <g transform="translate(145, 162)">
+    <rect x="0" y="0" width="135" height="26" rx="6" fill="#0f172a" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.6" />
+    <text x="67" y="17" text-anchor="middle" fill="#e0f2fe" class="mono" font-size="11">React 19 + Vite</text>
+
+    <rect x="150" y="0" width="145" height="26" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.6" />
+    <text x="222" y="17" text-anchor="middle" fill="#dbeafe" class="mono" font-size="11">IndexedDB Storage</text>
+
+    <rect x="310" y="0" width="145" height="26" rx="6" fill="#0f172a" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.6" />
+    <text x="382" y="17" text-anchor="middle" fill="#ede9fe" class="mono" font-size="11">Web Audio Synth</text>
+
+    <rect x="470" y="0" width="135" height="26" rx="6" fill="#0f172a" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.6" />
+    <text x="537" y="17" text-anchor="middle" fill="#e0f2fe" class="mono" font-size="11">Offline PWA</text>
+  </g>
+
+  <!-- Bottom subtitle -->
+  <text x="450" y="214" text-anchor="middle" fill="#64748b" class="mono" font-size="11">Zero Backend Dependency • BroadcastChannel Multi-Tab Concurrency • 100% Private</text>
+</svg>
